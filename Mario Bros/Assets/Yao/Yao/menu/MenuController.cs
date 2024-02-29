@@ -13,10 +13,8 @@ public class MenuController : MonoBehaviour
 
     public void QuitGame()
     {
-        // 打印到控制台，方便在编辑器中调试
         Debug.Log("Quit Game");
 
-        // 退出游戏
         Application.Quit();
     }
 }
