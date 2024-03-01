@@ -11,17 +11,19 @@ public class MarioController : MonoBehaviour
     private bool facingRight = true;
     public PhysicsMaterial2D friction; 
     public PhysicsMaterial2D noFriction;
-
+    private Animator animator;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         GetComponent<Rigidbody2D>().sharedMaterial = friction;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         // Check if Mario is grounded using Rigidbody2D's IsTouchingLayers method
         isGrounded = rb.IsTouchingLayers(groundLayer);
+        animator.SetBool("isGrounded", isGrounded);
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -34,7 +36,7 @@ public class MarioController : MonoBehaviour
         // Horizontal movement
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-
+        animator.SetFloat("horizontal",moveInput);
         // Flip Mario sprite if necessary
         if (moveInput > 0 && !facingRight)
         {
