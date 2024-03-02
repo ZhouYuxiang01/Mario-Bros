@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,5 +23,15 @@ public class GameManager : MonoBehaviour
     {
         gameOverPanel.SetActive(true);
         Time.timeScale = 00.0f;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
