@@ -14,6 +14,8 @@ public class MarioController : MonoBehaviour
     private Animator animator;
     public GameObject flagpole;
     public Transform bottom;
+    //public string deathSceneName = "DeathScene"; 
+    //public string victorySceneName = "VictoryScene";
 
 
     private void Start()
@@ -36,6 +38,7 @@ public class MarioController : MonoBehaviour
         if (transform.position.y < bottom.position.y)
         {
             Debug.Log("Game Over"); 
+            //SceneManager.LoadScene(DeathScene);
         }
     }
 
@@ -61,6 +64,7 @@ public class MarioController : MonoBehaviour
         if (other.gameObject == flagpole)
         {
             Debug.Log("Victory!"); 
+            //SceneManager.LoadScene(VictoryScene);
         }
     }
 
