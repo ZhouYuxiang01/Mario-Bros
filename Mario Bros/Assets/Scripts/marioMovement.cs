@@ -15,6 +15,7 @@ public class MarioController : MonoBehaviour
     public Transform bottom;
     public GameObject flagpole;
     public AudioClip jumpSound;
+    public GameManager gameManager;
     //public string deathSceneName = "DeathScene"; 
     //public string victorySceneName = "VictoryScene";
 
@@ -39,7 +40,9 @@ public class MarioController : MonoBehaviour
         }
         if (transform.position.y < bottom.position.y)
         {
-            Debug.Log("Game Over"); 
+            gameManager.GameOver();
+            animator.SetBool("IsDied",true);
+            //Debug.Log("Game Over"); 
             //SceneManager.LoadScene(DeathScene);
         }
         }
