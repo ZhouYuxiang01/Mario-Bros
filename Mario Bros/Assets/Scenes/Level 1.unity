@@ -201,6 +201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipeTop (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2439247686418545616, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6597460110669989603, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 57.97
@@ -272,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2327091384369559658, guid: 7730e2f8a869f0644988523cac147f23, type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6041742074284284436, guid: 7730e2f8a869f0644988523cac147f23, type: 3}
       propertyPath: m_Name
@@ -284,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 254cf7fb49cb60c4fb014286171a0853, type: 2}
     - target: {fileID: 6345767419775418228, guid: 7730e2f8a869f0644988523cac147f23, type: 3}
       propertyPath: jumpForce
-      value: 9
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 6345767419775418228, guid: 7730e2f8a869f0644988523cac147f23, type: 3}
       propertyPath: noFriction
@@ -2581,6 +2585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipeTop (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2439247686418545616, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6597460110669989603, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39
@@ -2758,6 +2766,10 @@ PrefabInstance:
     - target: {fileID: 2439247686418545616, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
       propertyPath: m_Name
       value: PipeTop (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439247686418545616, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6597460110669989603, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4343,6 +4355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipeTop (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2439247686418545616, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6597460110669989603, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 164
@@ -5380,6 +5396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipeTop
       objectReference: {fileID: 0}
+    - target: {fileID: 2439247686418545616, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6597460110669989603, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29
@@ -5439,6 +5459,10 @@ PrefabInstance:
     - target: {fileID: 2439247686418545616, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
       propertyPath: m_Name
       value: PipeTop (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439247686418545616, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6597460110669989603, guid: 0e76419c02dbf9f449803ea2900c4db1, type: 3}
       propertyPath: m_LocalPosition.x

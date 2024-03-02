@@ -12,6 +12,10 @@ public class MarioController : MonoBehaviour
     public PhysicsMaterial2D friction; 
     public PhysicsMaterial2D noFriction;
     private Animator animator;
+    public GameObject flagpole;
+    public Transform bottom;
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,6 +33,10 @@ public class MarioController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             GetComponent<Rigidbody2D>().sharedMaterial = noFriction;
         }
+        if (transform.position.y < bottom.position.y)
+        {
+            Debug.Log("Game Over"); 
+        }
     }
 
     private void FixedUpdate()
@@ -45,6 +53,14 @@ public class MarioController : MonoBehaviour
         else if (moveInput < 0 && facingRight)
         {
             Flip();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        
+        if (other.gameObject == flagpole)
+        {
+            Debug.Log("Victory!"); 
         }
     }
 
