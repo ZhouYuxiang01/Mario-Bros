@@ -14,6 +14,7 @@ public class MarioController : MonoBehaviour
     private Animator animator;
     public Transform bottom;
     public GameObject flagpole;
+    public AudioClip jumpSound;
     //public string deathSceneName = "DeathScene"; 
     //public string victorySceneName = "VictoryScene";
 
@@ -34,6 +35,7 @@ public class MarioController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             GetComponent<Rigidbody2D>().sharedMaterial = noFriction;
+            GetComponent<AudioSource>().PlayOneShot(jumpSound);
         }
         if (transform.position.y < bottom.position.y)
         {
