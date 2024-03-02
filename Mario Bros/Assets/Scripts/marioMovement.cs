@@ -12,8 +12,10 @@ public class MarioController : MonoBehaviour
     public PhysicsMaterial2D friction; 
     public PhysicsMaterial2D noFriction;
     private Animator animator;
-    public GameObject flagpole;
     public Transform bottom;
+    public GameObject flagpole;
+    //public string deathSceneName = "DeathScene"; 
+    //public string victorySceneName = "VictoryScene";
 
 
     private void Start()
@@ -36,8 +38,10 @@ public class MarioController : MonoBehaviour
         if (transform.position.y < bottom.position.y)
         {
             Debug.Log("Game Over"); 
+            //SceneManager.LoadScene(DeathScene);
         }
-    }
+        }
+    
 
     private void FixedUpdate()
     {
@@ -54,13 +58,17 @@ public class MarioController : MonoBehaviour
         {
             Flip();
         }
+        
     }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        // Check if Mario collided with the flagpole
         if (other.gameObject == flagpole)
         {
-            Debug.Log("Victory!"); 
+            // Victory logic goes here
+            Debug.Log("Victory!"); // Example: Log message
+            // You can add more victory logic here, such as stopping the game, displaying a victory message, etc.
         }
     }
 
@@ -71,4 +79,5 @@ public class MarioController : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+    
 }
