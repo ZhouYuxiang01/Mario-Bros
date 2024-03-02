@@ -7,7 +7,7 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Level 1");
         Debug.Log("Start Game");
     }
 
