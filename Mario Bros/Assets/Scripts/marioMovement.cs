@@ -40,8 +40,9 @@ public class MarioController : MonoBehaviour
         }
         if (transform.position.y < bottom.position.y)
         {
+            animator.SetBool("IsDied", true);
+            transform.Translate(Vector2.up * 2);
             gameManager.GameOver();
-            animator.SetBool("IsDied",true);
             //Debug.Log("Game Over"); 
             //SceneManager.LoadScene(DeathScene);
         }
