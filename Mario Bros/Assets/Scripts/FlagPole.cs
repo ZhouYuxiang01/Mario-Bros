@@ -21,6 +21,7 @@ public class FlagPole : MonoBehaviour
     private IEnumerator LevelCompleteSequence(Transform player)
     {
         player.GetComponent<MarioController>().enabled = false;
+
         player.gameObject.SetActive(false);
         gameManager.GameWin();
         yield return new WaitForSeconds(2f);
@@ -29,8 +30,12 @@ public class FlagPole : MonoBehaviour
 
     private IEnumerator MoveTo(Transform subject, Vector3 position)
     {
-        subject.position = Vector3.MoveTowards(subject.position, position, speed * Time.deltaTime);
-        yield return null;
+        while (Vector3.Distance(subject.position, position) > 0.125f)
+        {
+            subject.position = Vector3.MoveTowards(subject.position, position, speed * Time.deltaTime);
+            yield return null;
+        }
+
         subject.position = position;
     }
 
