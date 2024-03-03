@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOverPanel;
+    public GameObject winPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,13 @@ public class GameManager : MonoBehaviour
         gameOverPanel.SetActive(true);
         Time.timeScale = 00.0f;
     }
+
+    public void GameWin()
+    {
+        winPanel.SetActive(true);
+    }
+
+    
 
     public void Restart()
     {

@@ -13,7 +13,6 @@ public class MarioController : MonoBehaviour
     public PhysicsMaterial2D noFriction;
     private Animator animator;
     public Transform bottom;
-    public GameObject flagpole;
     public AudioClip jumpSound;
     public GameManager gameManager;
     //public string deathSceneName = "DeathScene"; 
@@ -66,17 +65,6 @@ public class MarioController : MonoBehaviour
         }
         
     }
-    
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // Check if Mario collided with the flagpole
-        if (other.gameObject == flagpole)
-        {
-            // Victory logic goes here
-            Debug.Log("Victory!"); // Example: Log message
-            // You can add more victory logic here, such as stopping the game, displaying a victory message, etc.
-        }
-    }
 
     private void Flip()
     {
@@ -85,5 +73,5 @@ public class MarioController : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
-    
+
 }
