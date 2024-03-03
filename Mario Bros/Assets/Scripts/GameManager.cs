@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverPanel.SetActive(true);
-        Time.timeScale = 00.0f;
     }
 
     public void GameWin()
